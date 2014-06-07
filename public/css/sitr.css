@@ -11,6 +11,17 @@ html {
   background-image: url("/img/bergen-1.jpg");
   background-size: cover;
   background-position: center;
+  box-sizing: border-box;
+  padding: 5% 0%;
+}
+#hero #hero-group {
+  height: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+  background-image: url("/img/sitr-hero.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 #instructors {
   width: 100%;
