@@ -4,8 +4,27 @@ html(lang="en")
     title Swingin' in the Rain 2014
     link(rel="stylesheet", type="text/css", href="/css/sitr.css")
   body
-    #hero
+    #hero.section
       #hero-group
-    #instructors
-    #logistics
-    #footer
+    #instructors.section
+      #instructors-group
+        img.with(src="/img/with.png")
+        .instructor
+          img.instructor-img(src="/img/jon-jenna.jpg")
+          span.instructor-name.pad-before Jon & Jenna
+        .instructor
+          span.instructor-name.pad-after Audun & Charlotte
+          img.instructor-img(src="/img/audun-charlotte.jpg")
+        img.and(src="/img/and.png")
+        .instructor
+          img.instructor-img(src="/img/david-skinner.jpg")
+          span.instructor-name.pad-before.smaller Skinner Swing Ensemble
+    #logistics.section
+      #logistics-group
+        img.simple-ornament(src="/img/simple-ornament.svg")
+        | Swingin' in the Rain is a Lindy Hop dance workshop in Bergen, Norway
+        | held by the Cottontails dance club. This year's workshop will be held 
+        | on the weekend of the 10th—12th of October. Join us for three levels 
+        | of classes, live music, and lots of dancing!
+        img.detailed-ornament(src="/img/detailed-ornament.svg")
+    #footer.section

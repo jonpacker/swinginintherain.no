@@ -1,5 +1,6 @@
 var express = require('express');
 var http = require('http');
+var locale = require('locale');
 
 var app = express();
 var server = http.createServer(app);
@@ -7,8 +8,11 @@ var server = http.createServer(app);
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
 
+app.use(locale(['en', 'nb']));
+
 app.get('/', function(req, res) {
-  res.render('index');
+  var res = require('./res/' + req.locale + '.json');
+  res.render('index', {res: });
 });
 
 app.use(require('stylus').middleware(__dirname + '/public'));
