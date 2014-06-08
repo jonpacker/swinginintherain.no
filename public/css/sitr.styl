@@ -1,3 +1,5 @@
+@import "canter/stylesheet.css"
+
 body
 html
   padding 0px
@@ -5,15 +7,19 @@ html
   width 100%
   height 100%
 
-#hero
+.section
   width 100%
   height 100%
-  background-image url("/img/bergen-1.jpg")
   background-size cover
   background-position center
   box-sizing border-box
-  padding 5% 0%
+  padding 5%
+  min-height 800px
+  color white
+  font-family canterbold
 
+#hero
+  background-image url("/img/bergen-1.jpg")
   #hero-group
     height 100%
     max-width 90%
@@ -24,22 +30,100 @@ html
     background-repeat no-repeat
 
 #instructors
-  width 100%
-  height 100%
   background-image url("/img/bergen-2.jpg")
-  background-size cover
-  background-position center
+
+  #instructors-group
+    margin-left 45%
+    width 55%
+    box-sizing border-box
+    height 100%
+
+    .with, .and
+      display block
+      margin 0 auto
+
+    .with
+      width 80px
+      margin-bottom 25px
+
+    .and
+      margin-top 60px
+      width 50px
+
+    .instructor
+      margin-top -25px
+      text-align center
+
+    .instructor-img
+      width 140px
+      border-radius 1000px
+      border 4px solid #cdd7de
+      vertical-align middle
+
+    .instructor-name
+      font-size 65px
+      vertical-align middle
+      display inline-block
+      text-shadow 0px 1px 2px black
+
+      &.smaller
+        font-size 50px
+
+      &.pad-before
+        margin-left 40px
+
+      &.pad-after
+        margin-right 40px
+
+    @media (max-width: 1100px)
+      width 80%
+      margin-left 20%
+
+      .instructor-img
+        width 100px
+      .instructor-name
+        &.pad-before
+          margin-right 20px
+        &.pad-after
+          margin-right 20px
+
+    @media (max-width: 700px)
+      width 100%
+      margin-left 0px
+
+      .instructor-name
+        font-size 50px
+
+        &.smaller
+          font-size 40px
+
+
 
 #logistics
-  width 100%
-  height 100%
   background-image url("/img/bergen-3.jpg")
-  background-size cover
-  background-position center
+
+  #logistics-group
+    font-family BoltonLight
+    font-size 28px
+    line-height 44px
+    width 50%
+    max-width 600px
+    margin 5% auto 0%
+    text-shadow 0px 1px 2px black
+    text-align center
+
+    .simple-ornament
+      width 25%
+      display block
+      margin 20px auto
+
+    .detailed-ornament
+      width 50%
+      display block
+      margin 20px auto
+
+    @media (max-width: 800px)
+      width 100%
 
 #footer
-  width 100%
-  height 100%
   background-image url("/img/bergen-foot.jpg")
-  background-size cover
-  background-position center
