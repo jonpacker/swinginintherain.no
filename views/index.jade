@@ -6,15 +6,19 @@ html(lang="en")
   body
     #hero.section
       #hero-group(style="background-image:url(#{res.logo})")
+      #down
+        .fa.fa-chevron-down
     #instructors.section
       #instructors-group
         img.with(src=res.with_ornament)
         .instructor
-          img.instructor-img(src="/img/jon-jenna.jpg")
+          a(href="https://www.youtube.com/watch?v=e75FhQsI0UM", target="_blank")
+            img.instructor-img(src="/img/jon-jenna.jpg")
           span.instructor-name.pad-before Jon & Jenna
         .instructor
           span.instructor-name.pad-after Audun & Charlotte
-          img.instructor-img(src="/img/audun-charlotte.jpg")
+          a(href="https://www.youtube.com/watch?v=mXzO5IO-2Qw", target="_blank")
+            img.instructor-img(src="/img/audun-charlotte.jpg")
         img.and(src=res.and_ornament)
         .instructor
           img.instructor-img(src="/img/david-skinner.jpg")
@@ -26,10 +30,31 @@ html(lang="en")
           | Swingin' in the Rain er en Lindy Hop danseworkshop i Bergen, drevet
           | av Cottontails Danseklubb. Årets workshop skjer på helgen 10.—12.
           | oktober. Bli med for tre nivåer, levende musikk, og mye dansing!
+          | Påmelding åpner snart!
         else 
           | Swingin' in the Rain is a Lindy Hop dance workshop in Bergen, Norway
           | held by the Cottontails dance club. This year's workshop will be held 
           | on the weekend of the 10th—12th of October. Join us for three levels 
-          | of classes, live music, and lots of dancing!
+          | of classes, live music, and lots of dancing! Registration opens soon!
+        img.flat-ornament(src="/img/flat-ornament.svg")
+        .field
+          .fa.fa-map-marker
+          | Gimle
+          span.smaller –Kong Oscarsgate 18
+          | , U1880
+          span.smaller –Domkirkegate 4
+        .field
+          .fa.fa-calendar
+          | #{locale == 'nb' ? '10.—12. oktober 2014' : '10th-12th October 2014'}
+        .field
+          .fa.fa-ticket
+          | 1000kr,
+          span.smaller  900kr early bird
         img.detailed-ornament(src="/img/detailed-ornament.svg")
     #footer.section
+      #footer-group
+        if locale == 'nb'
+          | Swingin' in the Rain er drevet av
+        else
+          | Swingin' in the Rain is held by
+        img.ct-logo(src="/img/ct-logo.svg")
