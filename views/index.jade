@@ -5,17 +5,17 @@ html(lang="en")
     link(rel="stylesheet", type="text/css", href="/css/sitr.css")
   body
     #hero.section
-      #hero-group
+      #hero-group(style="background-image:url(#{logo})")
     #instructors.section
       #instructors-group
-        img.with(src="/img/with.png")
+        img.with(src=with_ornament)
         .instructor
           img.instructor-img(src="/img/jon-jenna.jpg")
           span.instructor-name.pad-before Jon & Jenna
         .instructor
           span.instructor-name.pad-after Audun & Charlotte
           img.instructor-img(src="/img/audun-charlotte.jpg")
-        img.and(src="/img/and.png")
+        img.and(src=and_ornament)
         .instructor
           img.instructor-img(src="/img/david-skinner.jpg")
           span.instructor-name.pad-before.smaller Skinner Swing Ensemble
