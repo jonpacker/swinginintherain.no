@@ -6,6 +6,11 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, user-scalable=no")
   body
     #hero.section
+      #languages
+        a(href="/en")
+          img(src="/img/flag-en.svg")
+        a(href="/no")
+          img(src="/img/flag-no.svg")
       #hero-group(style="background-image:url(#{res.logo})")
       #down
         .fa.fa-chevron-down
@@ -28,10 +33,10 @@ html(lang="en")
       #logistics-group
         img.simple-ornament(src="/img/simple-ornament.svg")
         if locale == 'nb'
-          | Swingin' in the Rain is a Lindy Hop dance workshop in Bergen, Norway
-          | held by the Cottontails dance club. This year's workshop will be held 
-          | on the weekend of the 10th—12th of October. Join us for three levels 
-          | of classes, live music, and lots of dancing! Registration opens soon!
+          | Swingin' in the Rain er en årlig lindy hop workshop i Bergen, 
+          | organisert av Cottontails danseklubb. I år vil workshopen finne
+          | sted helgen 10.-12. oktober. Det blir kurs på tre nivåer, fantastisk
+          | live musikk og mye dansing! Påmelding starter snart!
         else 
           | Swingin' in the Rain is a Lindy Hop dance workshop in Bergen, Norway
           | held by the Cottontails dance club. This year's workshop will be held 
@@ -41,28 +46,27 @@ html(lang="en")
         .field
           .fa.fa-map-marker
           | Gimle
-          span.smaller –Kong Oscarsgate 18
+          span.smaller –Kong Oscars gate 18
           | , U1880
-          span.smaller –Domkirkegate 4
+          span.smaller –Domkirkegaten 4
         .field
           .fa.fa-calendar
           | #{locale == 'nb' ? '10.—12. oktober 2014' : '10th-12th October 2014'}
         .field
           .fa.fa-ticket
-          | 1000kr,
-          span.smaller  900kr early bird
+          | 1000kr, 900kr early bird
         img.detailed-ornament(src="/img/detailed-ornament.svg")
     #footer.section
       #footer-group
         if locale == 'nb'
-          | Swingin' in the Rain er drevet av
+          | Swingin' in the Rain arrangeres av
         else
           | Swingin' in the Rain is held by
         a(href="http://www.thecottontails.net")
         img.ct-logo(src="/img/ct-logo.svg")
         .email
           if locale == 'nb'
-            | Spørsmål? Henvendelser? Email oss: 
+            | Spørsmål? Henvendelser? Send en e-post til  
           else
             | Questions? Inquiries? Email us: 
           a(href="mailto:post@thecottontails.net") post@thecottontails.net
