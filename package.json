@@ -1,0 +1,25 @@
+{
+  "name": "sitr",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jonpacker/swinginintherain.no.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonpacker/swinginintherain.no/issues"
+  },
+  "homepage": "https://github.com/jonpacker/swinginintherain.no",
+  "dependencies": {
+    "express": "^4.4.1",
+    "jade": "^1.3.1",
+    "locale": "0.0.15",
+    "stylus": "^0.46.2"
+  }
+}
