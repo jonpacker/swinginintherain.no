@@ -10,9 +10,11 @@ app.set('views', __dirname + '/views');
 
 app.use(locale(['en', 'nb']));
 
-app.get('/', function(req, res) {
-  var resources = require('./res/' + req.locale + '.json');
-  res.render('index', {res: resources, locale: req.locale});
+app.get('/:locale?', function(req, res) {
+  var locale = req.params.locale || req.locale;
+  if (locale != 'nb' && locale != 'en') locale = 'en';
+  var resources = require('./res/' + locale + '.json');
+  res.render('index', {res: resources, locale: locale});
 });
 
 app.use(require('stylus').middleware(__dirname + '/public'));
