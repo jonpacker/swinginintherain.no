@@ -3,6 +3,8 @@ html(lang="en")
   head
     title Swingin' in the Rain 2014
     link(rel="stylesheet", type="text/css", href="/css/sitr.css")
+    script(src="/js/jquery-1.9.1.min.js")
+    script(src="/js/jPushMenu.js")
   body
     #hero.section
       #hero-group(style="background-image:url(#{res.logo})")
@@ -57,4 +59,12 @@ html(lang="en")
           | Swingin' in the Rain er drevet av
         else
           | Swingin' in the Rain is held by
+        a(href="http://www.thecottontails.net")
         img.ct-logo(src="/img/ct-logo.svg")
+        .email
+          if locale == 'nb'
+            | Spørsmål? Henvendelser? Email oss: 
+          else
+            | Questions? Inquiries? Email us: 
+          a(href="mailto:post@thecottontails.net") post@thecottontails.net
+
