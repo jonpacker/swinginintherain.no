@@ -3,10 +3,12 @@ html(lang="en")
   head
     title Swingin' in the Rain 2014
     link(rel="stylesheet", type="text/css", href="/css/sitr.css")
-    script(src="/js/jquery-1.9.1.min.js")
-    script(src="/js/jPushMenu.js")
+    meta(name="viewport", content="width=device-width, user-scalable=no")
   body
     #hero.section
+      #menu-button
+        a.toggle-menu.menu-right.push-body(href="javascript:void 0")
+          .fa.fa-bars
       #hero-group(style="background-image:url(#{res.logo})")
       #down
         .fa.fa-chevron-down
@@ -67,4 +69,3 @@ html(lang="en")
           else
             | Questions? Inquiries? Email us: 
           a(href="mailto:post@thecottontails.net") post@thecottontails.net
-
