@@ -56,6 +56,8 @@ html
     width 100%
     box-sizing border-box
     height 100%
+    margin 0 auto
+    text-align center
 
     .with, .and
       display block
@@ -67,22 +69,51 @@ html
 
     .and
       margin-top 60px
+      margin-bottom 50px
       width 50px
 
     .instructor
-      margin-top -25px
       text-align center
+      display inline-block
+      vertical-align top
+      width 300px
+      text-align center
+      margin-bottom 30px
+
+      &.left
+        text-align left
+      &.right
+        text-align right
+
+      &.bigger
+        width 100%
+        .instructor-name
+          font-size 65px
 
     .instructor-img
-      width 140px
+      width 120px
       border-radius 1000px
       vertical-align middle
       border 6px double white
+      margin 0 auto
+      display block
+
+    .smaller
+      font-size 36px
+      color rgba(white,0.8)
+      vertical-align middle
+
+    .country
+      display block
+      font-size 22px
+      color rgba(white,0.6)
+      vertical-align middle
 
     .instructor-name
-      font-size 65px
-      vertical-align middle
-      display inline-block
+      font-size 55px
+      display block
+      margin 15px 0px 0px
+      text-align center
       text-shadow 0px 1px 2px black
 
       &.smaller
