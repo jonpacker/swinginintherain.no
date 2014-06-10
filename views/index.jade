@@ -27,15 +27,19 @@ html(lang="en")
             img.instructor-img(src="/img/audun-charlotte.jpg")
           span.instructor-name Audun & Charlotte
           span.country NOR
-        .instructor
-          img.instructor-img(src="/img/argeir-monika.jpg")
-          span.instructor-name Arngeir & Monika
-          span.country NOR
+        //-.instructor
+        //-  img.instructor-img(src="/img/argeir-monika.jpg")
+        //-  span.instructor-name Arngeir & Monika
+        //-  span.country NOR
         img.and(src=res.and_ornament)
         .instructor.bigger
           span.instructor-name 
             span.smaller the 
             | Skinner Swing Ensemble
+        #registration
+          .fa.fa-ticket
+          | #{locale == 'nb' ? 'Påmelding starter snart!' : 'Registration opens soon!'}
+        
     #logistics.section
       #logistics-group
         img.simple-ornament(src="/img/simple-ornament.svg")
