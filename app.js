@@ -1,6 +1,8 @@
 var express = require('express');
 var http = require('http');
 var locale = require('locale');
+var stylus = require('stylus');
+var nib = require('nib');
 
 var app = express();
 var server = http.createServer(app);
@@ -17,7 +19,10 @@ app.get('/:locale?', function(req, res) {
   res.render('index', {res: resources, locale: locale});
 });
 
-app.use(require('stylus').middleware(__dirname + '/public'));
+app.use(stylus.middleware({
+  src: __dirname + '/public',
+  compile: function(s, p) { return stylus(s).set('filename', p).use(nib()) }
+}));
 app.use(express.static(__dirname + '/public'));
 
 server.listen(4000);
